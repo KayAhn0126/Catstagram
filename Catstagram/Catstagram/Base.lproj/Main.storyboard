@@ -283,6 +283,12 @@
                             <constraint firstItem="1Km-eA-gRa" firstAttribute="top" secondItem="ovl-rH-Bkg" secondAttribute="bottom" constant="30" id="ymx-QG-BfO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="wKd-KT-UvL" id="bMy-Ut-mHW"/>
+                        <outlet property="nameTextField" destination="eky-Bn-ugA" id="r3g-un-x72"/>
+                        <outlet property="passwordTextField" destination="Mqh-jT-HP9" id="DdC-Pn-HJG"/>
+                        <outlet property="userNameTextField" destination="QvG-0m-xM8" id="ia1-oa-czW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAp-Zg-Los" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
