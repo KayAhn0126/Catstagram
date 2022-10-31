@@ -26,17 +26,17 @@ extension UIViewController {
         let customColors = colors
         
         // attribute 객체를 생성한다.
-        let attributeddString = NSMutableAttributedString(string: wholeText)
+        let attributedString = NSMutableAttributedString(string: wholeText)
         
         // 텍스트에 맞는 설정을 추가한다.
         texts.indices.forEach { index in
-            attributeddString.addAttribute(.font,
+            attributedString.addAttribute(.font,
                                            value: customFonts[index],
                                            range: customTextsRanges[index])
-            attributeddString.addAttribute(.font,
+            attributedString.addAttribute(.font,
                                            value: customColors[index],
                                            range: customTextsRanges[index])
         }
-        return attributeddString
+        return attributedString
     }
 }
