@@ -8,11 +8,37 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    // MARK: - Property
+    // MARK: - 유효성 검사를 위한 Property
+    
+    var isValidEmail = false {
+        didSet { // 프로퍼티 옵저버
+            self.validateUserInfo()
+        }
+    }
+    
+    var isValidName = false {
+        didSet { // 프로퍼티 옵저버
+            self.validateUserInfo()
+        }
+    }
+    
+    var isValidUsername = false {
+        didSet { // 프로퍼티 옵저버
+            self.validateUserInfo()
+        }
+    }
+    
+    var isValidPassword = false {
+        didSet { // 프로퍼티 옵저버
+            self.validateUserInfo()
+        }
+    }
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
     var textFields: [UITextField] {
         [emailTextField, nameTextField, userNameTextField, passwordTextField]
@@ -21,6 +47,9 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextField()
+        self.signUpButton.isEnabled = false
+        self.signUpButton.backgroundColor = UIColor(named: "disabledButtonColor")
+        
     }
     
     // MARK: - Actions
@@ -28,13 +57,13 @@ class SignUpViewController: UIViewController {
         if let text = sender.text {
             switch sender {
             case emailTextField :
-                print("email")
+                self.isValidEmail = text.isValidEmail()
             case nameTextField :
-                print("name")
+                self.isValidName = text.count > 2 // 이름이 3글자 이상인지만 확인
             case userNameTextField :
-                print("userName")
+                self.isValidUsername = text.count > 2 // 유저네임이 3글자 이상인지만 확인
             case passwordTextField :
-                print("password")
+                self.isValidPassword = text.isValidPassword()
             default:
                 fatalError("Missing TextField")
             }
@@ -46,6 +75,24 @@ class SignUpViewController: UIViewController {
     private func setUpTextField() {
         textFields.forEach { tf in
             tf.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
+        }
+    }
+    
+    private func validateUserInfo() {
+        if isValidEmail
+            && isValidName
+            && isValidUsername
+            && isValidPassword {
+            changeButtonColorSlightly(self.signUpButton, "facebookColor", true)
+        } else {
+            changeButtonColorSlightly(self.signUpButton, "disabledButtonColor", false)
+        }
+    }
+    
+    private func changeButtonColorSlightly(_ sender: UIButton, _ colorName: String, _ clickEnable: Bool) {
+        UIButton.animate(withDuration: 0.5) {
+            sender.isEnabled = clickEnable
+            sender.backgroundColor = UIColor(named: colorName)
         }
     }
 }
