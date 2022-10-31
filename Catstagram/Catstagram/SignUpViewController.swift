@@ -42,10 +42,10 @@ class SignUpViewController: UIViewController {
     }
     
     // MARK: - Helpers
+    // 여러개를 동일한 액션으로 연결할때, for each와 연산프로퍼티를 코드가 간결해진다.
     private func setUpTextField() {
         textFields.forEach { tf in
             tf.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
         }
     }
-    // 여러개를 동일한 액션으로 연결할때, for each와 연산프로퍼티를 코드가 간결해진다.
 }

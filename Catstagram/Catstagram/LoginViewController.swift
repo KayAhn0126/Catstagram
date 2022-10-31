@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
             print(currentText)
         }
     }
+    
     @IBAction func passwordTextFieldEditingChanged(_ sender: UITextField) {
     
     }
