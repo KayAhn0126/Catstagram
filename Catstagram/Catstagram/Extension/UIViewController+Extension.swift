@@ -33,7 +33,7 @@ extension UIViewController {
             attributedString.addAttribute(.font,
                                            value: customFonts[index],
                                            range: customTextsRanges[index])
-            attributedString.addAttribute(.font,
+            attributedString.addAttribute(.foregroundColor,
                                            value: customColors[index],
                                            range: customTextsRanges[index])
         }
