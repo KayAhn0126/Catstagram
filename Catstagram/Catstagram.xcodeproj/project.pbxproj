@@ -70,13 +70,29 @@
 				6A19E263290902F700E155B7 /* Assets.xcassets */,
 				6A19E265290902F700E155B7 /* LaunchScreen.storyboard */,
 				6A19E268290902F700E155B7 /* Info.plist */,
+				6A19E2982910138C00E155B7 /* ViewController */,
+				6A19E2992910139900E155B7 /* Extension */,
+			);
+			path = Catstagram;
+			sourceTree = "<group>";
+		};
+		6A19E2982910138C00E155B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				6A19E26E290ACB1F00E155B7 /* LoginViewController.swift */,
 				6A19E270290ADB6500E155B7 /* SignUpViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6A19E2992910139900E155B7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				6A19E292290F817600E155B7 /* String+Extension.swift */,
 				6A19E294291005CB00E155B7 /* UIView+Extension.swift */,
 				6A19E29629100B8800E155B7 /* UIViewController+Extension.swift */,
 			);
-			path = Catstagram;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
