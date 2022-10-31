@@ -39,6 +39,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     var textFields: [UITextField] {
         [emailTextField, nameTextField, userNameTextField, passwordTextField]
@@ -47,6 +48,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextField()
+        setupAttribute()
         self.signUpButton.isEnabled = false
         self.signUpButton.backgroundColor = UIColor(named: "disabledButtonColor")
         
@@ -94,5 +96,24 @@ class SignUpViewController: UIViewController {
             sender.isEnabled = clickEnable
             sender.backgroundColor = UIColor(named: colorName)
         }
+    }
+    
+    private func setupAttribute() {
+        // setting attributes for signInButton
+        let askQuestionText = "계정이 있으신가요?"
+        let signInText = "로그인"
+        
+        let askQuestionTextFont = UIFont.systemFont(ofSize: 13)
+        let signInTextFont = UIFont.boldSystemFont(ofSize: 13)
+        
+        let askQuestionTextColor = UIColor.darkGray
+        let signInTextColor = UIColor(named: "facebookColor")!
+        
+        let attributes = generateButtonAttribute(self.signInButton,
+                                                 texts: askQuestionText, signInText,
+                                                 fonts: askQuestionTextFont, signInTextFont,
+                                                 colors: askQuestionTextColor, signInTextColor)
+        
+        self.signInButton.setAttributedTitle(attributes, for: .normal)
     }
 }
