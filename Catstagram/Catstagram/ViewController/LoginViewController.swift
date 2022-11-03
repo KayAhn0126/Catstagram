@@ -46,6 +46,11 @@ class LoginViewController: UIViewController {
         backBarButtonItem.tintColor = .gray
         self.navigationItem.backBarButtonItem = backBarButtonItem
         navigationController?.pushViewController(signUpViewController, animated: true)
+        
+        signUpViewController.userInfo = { [unowned self] data in
+            self.emailTextField.text = data.email
+            self.passwordTextField.text = data.password
+        }
     }
     
     @objc func backToOriginal(_ sender: UIBarButtonItem) {
