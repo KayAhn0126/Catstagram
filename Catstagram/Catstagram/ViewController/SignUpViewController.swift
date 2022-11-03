@@ -34,6 +34,8 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    var userInfo: ((UserInfo) -> Void)?
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
@@ -96,6 +98,16 @@ class SignUpViewController: UIViewController {
             sender.isEnabled = clickEnable
             sender.backgroundColor = UIColor(named: colorName)
         }
+    }
+    
+    @IBAction func signUpButtonDidTapped(_ sender: UIButton) {
+        let userInfo = UserInfo(email: emailTextField.text!,
+                                name: nameTextField.text!,
+                                userName: userNameTextField.text!,
+                                password: passwordTextField.text!
+        )
+        self.userInfo?(userInfo)
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func setupAttribute() {
