@@ -42,7 +42,14 @@ class LoginViewController: UIViewController {
         let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         
         // 3 화면전환 메서드 이용해 화면 전환
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backToOriginal(_:)))
+        backBarButtonItem.tintColor = .gray
+        self.navigationItem.backBarButtonItem = backBarButtonItem
         navigationController?.pushViewController(signUpViewController, animated: true)
+    }
+    
+    @objc func backToOriginal(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func setupAttribute() {
