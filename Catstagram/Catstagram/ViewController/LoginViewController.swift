@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+    var userInfo: UserInfo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAttribute()
@@ -30,7 +32,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
+        guard let userInfo = self.userInfo else { return }
+        if userInfo.email == emailTextField.text!
+            && userInfo.password == passwordTextField.text! {
+            let storyboard = UIStoryboard(name: "CatstagramTabBar", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "CatstagramTabBar") as! UITabBarController
+            tabBarController.modalPresentationStyle = .fullScreen
+            self.present(tabBarController, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Something is Wrong", message: "Check your email or password", preferredStyle: UIAlertController.Style.alert)
+            let cancelButton = UIAlertAction(title: "Cancel", style: .destructive)
+            let okButton = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(cancelButton)
+            alert.addAction(okButton)
+            present(alert,animated: true)
+        }
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
@@ -49,8 +65,7 @@ class LoginViewController: UIViewController {
         
         // closure 선언. -> signUpViewController에서 호출하면 실행됨.
         signUpViewController.userInfo = { [unowned self] data in
-            self.emailTextField.text = data.email
-            self.passwordTextField.text = data.password
+            self.userInfo = data
         }
     }
     
