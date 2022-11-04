@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
         self.navigationItem.backBarButtonItem = backBarButtonItem
         navigationController?.pushViewController(signUpViewController, animated: true)
         
+        // closure 선언. -> signUpViewController에서 호출하면 실행됨.
         signUpViewController.userInfo = { [unowned self] data in
             self.emailTextField.text = data.email
             self.passwordTextField.text = data.password
