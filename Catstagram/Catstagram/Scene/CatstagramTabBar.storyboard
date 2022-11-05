@@ -45,18 +45,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LK-Im-hlr">
-                                <rect key="frame" x="160.33333333333334" y="407" width="69.333333333333343" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nW-7b-KE6">
+                                <rect key="frame" x="0.0" y="47" width="390" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_catstagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="mSp-sT-XOd">
+                                        <rect key="frame" x="15" y="5" width="140" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="PdW-Hl-ghN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hj-Jt-WCL">
+                                        <rect key="frame" x="348" y="11.666666666666664" width="27" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="rkY-or-8p9"/>
+                                            <constraint firstAttribute="height" constant="27" id="xuu-pZ-Qhd"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_home_send"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ik9-A1-kyU">
+                                        <rect key="frame" x="306" y="11.666666666666664" width="27" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="WT6-ds-5Ny"/>
+                                            <constraint firstAttribute="height" constant="27" id="ukd-aw-xBM"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_home_heart"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aud-3r-O41">
+                                        <rect key="frame" x="264" y="11.666666666666664" width="27" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="RIB-5w-sPt"/>
+                                            <constraint firstAttribute="width" constant="27" id="pPy-z0-l3P"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_home_upload"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="01i-7d-nL1"/>
+                                    <constraint firstItem="mSp-sT-XOd" firstAttribute="top" secondItem="5nW-7b-KE6" secondAttribute="top" constant="5" id="FH0-kk-4eJ"/>
+                                    <constraint firstItem="mSp-sT-XOd" firstAttribute="leading" secondItem="5nW-7b-KE6" secondAttribute="leading" constant="15" id="N0r-WD-Rg5"/>
+                                    <constraint firstAttribute="trailing" secondItem="0hj-Jt-WCL" secondAttribute="trailing" constant="15" id="SFo-FK-1MM"/>
+                                    <constraint firstAttribute="bottom" secondItem="mSp-sT-XOd" secondAttribute="bottom" constant="5" id="Tqz-BH-NUL"/>
+                                    <constraint firstItem="0hj-Jt-WCL" firstAttribute="leading" secondItem="Ik9-A1-kyU" secondAttribute="trailing" constant="15" id="axT-JS-2cN"/>
+                                    <constraint firstItem="aud-3r-O41" firstAttribute="centerY" secondItem="5nW-7b-KE6" secondAttribute="centerY" id="bhJ-uc-ubX"/>
+                                    <constraint firstItem="Ik9-A1-kyU" firstAttribute="leading" secondItem="aud-3r-O41" secondAttribute="trailing" constant="15" id="fPS-Ph-i8N"/>
+                                    <constraint firstItem="0hj-Jt-WCL" firstAttribute="centerY" secondItem="5nW-7b-KE6" secondAttribute="centerY" id="mbP-yy-HAQ"/>
+                                    <constraint firstItem="Ik9-A1-kyU" firstAttribute="centerY" secondItem="5nW-7b-KE6" secondAttribute="centerY" id="mjw-HU-Uvh"/>
+                                    <constraint firstItem="mSp-sT-XOd" firstAttribute="centerY" secondItem="5nW-7b-KE6" secondAttribute="centerY" id="wGL-k9-6Db"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mgp-Po-Lau"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9LK-Im-hlr" firstAttribute="centerX" secondItem="8k3-qQ-VEa" secondAttribute="centerX" id="bWI-03-8el"/>
-                            <constraint firstItem="9LK-Im-hlr" firstAttribute="centerY" secondItem="8k3-qQ-VEa" secondAttribute="centerY" id="gsU-68-tvX"/>
+                            <constraint firstItem="mgp-Po-Lau" firstAttribute="trailing" secondItem="5nW-7b-KE6" secondAttribute="trailing" id="DcU-OK-KHb"/>
+                            <constraint firstItem="5nW-7b-KE6" firstAttribute="leading" secondItem="mgp-Po-Lau" secondAttribute="leading" id="Jo6-s0-Vmn"/>
+                            <constraint firstItem="5nW-7b-KE6" firstAttribute="top" secondItem="mgp-Po-Lau" secondAttribute="top" id="bjc-NS-S56"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="g9j-9h-xxZ"/>
@@ -85,6 +132,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_catstagram_logo" width="476" height="96"/>
+        <image name="ic_home_heart" width="512" height="512"/>
+        <image name="ic_home_send" width="512" height="512"/>
+        <image name="ic_home_upload" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
