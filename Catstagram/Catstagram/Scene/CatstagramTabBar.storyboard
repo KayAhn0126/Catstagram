@@ -97,16 +97,27 @@
                                     <constraint firstItem="mSp-sT-XOd" firstAttribute="centerY" secondItem="5nW-7b-KE6" secondAttribute="centerY" id="wGL-k9-6Db"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-Xq-YBm">
+                                <rect key="frame" x="0.0" y="97" width="390" height="664"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mgp-Po-Lau"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mgp-Po-Lau" firstAttribute="trailing" secondItem="K0v-Xq-YBm" secondAttribute="trailing" id="3QA-bW-6Jv"/>
+                            <constraint firstItem="K0v-Xq-YBm" firstAttribute="leading" secondItem="mgp-Po-Lau" secondAttribute="leading" id="4jh-E6-bfa"/>
+                            <constraint firstItem="K0v-Xq-YBm" firstAttribute="top" secondItem="5nW-7b-KE6" secondAttribute="bottom" id="5IC-cG-Pyg"/>
                             <constraint firstItem="mgp-Po-Lau" firstAttribute="trailing" secondItem="5nW-7b-KE6" secondAttribute="trailing" id="DcU-OK-KHb"/>
                             <constraint firstItem="5nW-7b-KE6" firstAttribute="leading" secondItem="mgp-Po-Lau" secondAttribute="leading" id="Jo6-s0-Vmn"/>
                             <constraint firstItem="5nW-7b-KE6" firstAttribute="top" secondItem="mgp-Po-Lau" secondAttribute="top" id="bjc-NS-S56"/>
+                            <constraint firstItem="mgp-Po-Lau" firstAttribute="bottom" secondItem="K0v-Xq-YBm" secondAttribute="bottom" id="mQr-6v-s4K"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="g9j-9h-xxZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="K0v-Xq-YBm" id="aUA-9I-WZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkV-X4-GL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
