@@ -13,7 +13,12 @@ class StoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        let storyCollectionNib = UINib(nibName: "StoryCollectionViewCell", bundle: nil)
+        collectionView.register(storyCollectionNib, forCellWithReuseIdentifier: "StoryCollectionViewCell")
+        collectionView.reloadData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,12 +37,15 @@ extension StoryTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as? StoryCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        return cell
     }
 }
 
 extension StoryTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize()
+        return CGSize(width: 50, height: 60)
     }
 }
