@@ -19,6 +19,11 @@
 		6A19E29729100B8800E155B7 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19E29629100B8800E155B7 /* UIViewController+Extension.swift */; };
 		6A779DC82913F72C00028D35 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A779DC72913F72C00028D35 /* UserInfo.swift */; };
 		6ABDAF982914EA040034CB05 /* CatstagramTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABDAF972914EA040034CB05 /* CatstagramTabBar.storyboard */; };
+		6AD3D2202916543100FF9A51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D21F2916543100FF9A51 /* HomeViewController.swift */; };
+		6AD3D22929169B4100FF9A51 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D22729169B4100FF9A51 /* FeedTableViewCell.swift */; };
+		6AD3D22A29169B4100FF9A51 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD3D22829169B4100FF9A51 /* FeedTableViewCell.xib */; };
+		6AD3D22F2917A2D800FF9A51 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D22D2917A2D800FF9A51 /* StoryTableViewCell.swift */; };
+		6AD3D2302917A2D800FF9A51 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD3D22E2917A2D800FF9A51 /* StoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		6A19E29629100B8800E155B7 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		6A779DC72913F72C00028D35 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		6ABDAF972914EA040034CB05 /* CatstagramTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatstagramTabBar.storyboard; sourceTree = "<group>"; };
+		6AD3D21F2916543100FF9A51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6AD3D22729169B4100FF9A51 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		6AD3D22829169B4100FF9A51 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		6AD3D22D2917A2D800FF9A51 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		6AD3D22E2917A2D800FF9A51 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +94,8 @@
 		6A19E2982910138C00E155B7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6A19E26E290ACB1F00E155B7 /* LoginViewController.swift */,
-				6A19E270290ADB6500E155B7 /* SignUpViewController.swift */,
+				6AD3D22B29169B5400FF9A51 /* Login */,
+				6AD3D2212916977D00FF9A51 /* Home */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -115,6 +125,43 @@
 				6ABDAF972914EA040034CB05 /* CatstagramTabBar.storyboard */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		6AD3D2212916977D00FF9A51 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3D21F2916543100FF9A51 /* HomeViewController.swift */,
+				6AD3D22C2917A2B400FF9A51 /* StoryTableViewCell */,
+				6AD3D2222916978B00FF9A51 /* FeedTableViewCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6AD3D2222916978B00FF9A51 /* FeedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3D22729169B4100FF9A51 /* FeedTableViewCell.swift */,
+				6AD3D22829169B4100FF9A51 /* FeedTableViewCell.xib */,
+			);
+			path = FeedTableViewCell;
+			sourceTree = "<group>";
+		};
+		6AD3D22B29169B5400FF9A51 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6A19E26E290ACB1F00E155B7 /* LoginViewController.swift */,
+				6A19E270290ADB6500E155B7 /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6AD3D22C2917A2B400FF9A51 /* StoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3D22D2917A2D800FF9A51 /* StoryTableViewCell.swift */,
+				6AD3D22E2917A2D800FF9A51 /* StoryTableViewCell.xib */,
+			);
+			path = StoryTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A19E267290902F700E155B7 /* LaunchScreen.storyboard in Resources */,
+				6AD3D2302917A2D800FF9A51 /* StoryTableViewCell.xib in Resources */,
+				6AD3D22A29169B4100FF9A51 /* FeedTableViewCell.xib in Resources */,
 				6ABDAF982914EA040034CB05 /* CatstagramTabBar.storyboard in Resources */,
 				6A19E264290902F700E155B7 /* Assets.xcassets in Resources */,
 				6A19E262290902F700E155B7 /* Main.storyboard in Resources */,
@@ -192,11 +241,14 @@
 				6A19E295291005CB00E155B7 /* UIView+Extension.swift in Sources */,
 				6A19E26F290ACB1F00E155B7 /* LoginViewController.swift in Sources */,
 				6A19E25B290902F600E155B7 /* AppDelegate.swift in Sources */,
+				6AD3D22F2917A2D800FF9A51 /* StoryTableViewCell.swift in Sources */,
 				6A19E271290ADB6500E155B7 /* SignUpViewController.swift in Sources */,
 				6A779DC82913F72C00028D35 /* UserInfo.swift in Sources */,
+				6AD3D2202916543100FF9A51 /* HomeViewController.swift in Sources */,
 				6A19E29729100B8800E155B7 /* UIViewController+Extension.swift in Sources */,
 				6A19E293290F817600E155B7 /* String+Extension.swift in Sources */,
 				6A19E25D290902F600E155B7 /* SceneDelegate.swift in Sources */,
+				6AD3D22929169B4100FF9A51 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +399,7 @@
 				INFOPLIST_FILE = Catstagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CatstagramTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,7 +426,7 @@
 				INFOPLIST_FILE = Catstagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CatstagramTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
