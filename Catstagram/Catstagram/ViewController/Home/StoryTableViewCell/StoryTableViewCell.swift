@@ -19,6 +19,13 @@ class StoryTableViewCell: UITableViewCell {
         let storyCollectionNib = UINib(nibName: "StoryCollectionViewCell", bundle: nil)
         collectionView.register(storyCollectionNib, forCellWithReuseIdentifier: "StoryCollectionViewCell")
         collectionView.reloadData()
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        flowLayout.minimumLineSpacing = 12
+        
+        collectionView.collectionViewLayout = flowLayout
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

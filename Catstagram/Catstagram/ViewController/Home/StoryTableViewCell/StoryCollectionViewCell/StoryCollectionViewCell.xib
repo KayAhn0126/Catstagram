@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +19,54 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccI-dw-4cm">
                         <rect key="frame" x="0.0" y="0.0" width="230" height="236"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hG-PF-leq">
+                                <rect key="frame" x="91" y="0.0" width="48" height="48"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCa-YS-Lp9">
+                                        <rect key="frame" x="0.6666666666666714" y="0.66666666666666785" width="47" height="47"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qfu-7i-iCK">
+                                                <rect key="frame" x="1" y="3" width="45" height="41.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="9MA-FJ-mSK"/>
+                                                    <constraint firstAttribute="width" constant="45" id="dmJ-wT-0Aj"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qfu-7i-iCK" firstAttribute="centerY" secondItem="lCa-YS-Lp9" secondAttribute="centerY" id="3Cz-yi-b4l"/>
+                                            <constraint firstItem="qfu-7i-iCK" firstAttribute="centerX" secondItem="lCa-YS-Lp9" secondAttribute="centerX" id="Sif-6G-snP"/>
+                                            <constraint firstAttribute="width" constant="47" id="aTm-no-sce"/>
+                                            <constraint firstAttribute="height" constant="47" id="rJN-Ki-qBs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1YP-aJ-Ade"/>
+                                    <constraint firstItem="lCa-YS-Lp9" firstAttribute="centerX" secondItem="7hG-PF-leq" secondAttribute="centerX" id="CtE-kj-E2s"/>
+                                    <constraint firstItem="lCa-YS-Lp9" firstAttribute="centerY" secondItem="7hG-PF-leq" secondAttribute="centerY" id="ctV-Et-kbs"/>
+                                    <constraint firstAttribute="width" constant="48" id="zzB-Hy-9oE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-fE-NjE">
+                                <rect key="frame" x="106.33333333333333" y="50" width="17.333333333333329" height="11"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XYB-fE-NjE" firstAttribute="top" secondItem="7hG-PF-leq" secondAttribute="bottom" constant="2" id="6e0-WR-ZZT"/>
+                            <constraint firstItem="7hG-PF-leq" firstAttribute="centerX" secondItem="ccI-dw-4cm" secondAttribute="centerX" id="VDZ-V3-2Lm"/>
+                            <constraint firstItem="7hG-PF-leq" firstAttribute="top" secondItem="ccI-dw-4cm" secondAttribute="top" id="Xb8-lw-ZdZ"/>
+                            <constraint firstItem="XYB-fE-NjE" firstAttribute="centerX" secondItem="qfu-7i-iCK" secondAttribute="centerX" id="icX-3o-FJP"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -32,10 +78,19 @@
                 <constraint firstAttribute="trailing" secondItem="ccI-dw-4cm" secondAttribute="trailing" id="cai-tr-lrA"/>
             </constraints>
             <size key="customSize" width="230" height="236"/>
+            <connections>
+                <outlet property="cellBackgroundView" destination="7hG-PF-leq" id="4gw-Mg-LRv"/>
+                <outlet property="profileBackgroundView" destination="lCa-YS-Lp9" id="WrF-yI-3gd"/>
+                <outlet property="userImageView" destination="qfu-7i-iCK" id="HKX-PI-haY"/>
+            </connections>
             <point key="canvasLocation" x="3.0769230769230766" y="54.028436018957343"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
