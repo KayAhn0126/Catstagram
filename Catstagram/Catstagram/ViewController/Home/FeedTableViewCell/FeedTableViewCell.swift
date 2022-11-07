@@ -15,7 +15,6 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var contentImageView: UIImageView!
     
-    
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var directMessageButton: UIButton!
@@ -29,7 +28,7 @@ class FeedTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
         userImageView.layer.cornerRadius = 12.5
         userImageView.clipsToBounds = true
         
@@ -51,6 +50,7 @@ class FeedTableViewCell: UITableViewCell {
     @IBAction func heartButtonTapped(_ sender: UIButton) {
         heartButton.isSelected.toggle()
     }
+    
     @IBAction func bookMarkButtonTapped(_ sender: UIButton) {
         bookMarkButton.isSelected.toggle()
     }
