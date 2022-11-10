@@ -18,7 +18,6 @@ class StoryTableViewCell: UITableViewCell {
         
         let storyCollectionNib = UINib(nibName: "StoryCollectionViewCell", bundle: nil)
         collectionView.register(storyCollectionNib, forCellWithReuseIdentifier: "StoryCollectionViewCell")
-        collectionView.reloadData()
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal

@@ -39,6 +39,7 @@ class FeedTableViewCell: UITableViewCell {
         let attributedStr = NSMutableAttributedString(string: contentDescriptionLabel.text ?? "")
         let range = NSRange(location: 0, length: userLabel.text?.count ?? 0)
         attributedStr.addAttribute(.font, value: fontSize, range: range)
+        contentDescriptionLabel.attributedText = attributedStr
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
