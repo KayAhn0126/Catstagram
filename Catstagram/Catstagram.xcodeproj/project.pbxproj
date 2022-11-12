@@ -18,6 +18,9 @@
 		6A19E295291005CB00E155B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19E294291005CB00E155B7 /* UIView+Extension.swift */; };
 		6A19E29729100B8800E155B7 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19E29629100B8800E155B7 /* UIViewController+Extension.swift */; };
 		6A779DC82913F72C00028D35 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A779DC72913F72C00028D35 /* UserInfo.swift */; };
+		6A7E62C8291E2B2900E0A698 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E62C7291E2B2900E0A698 /* ProfileViewController.swift */; };
+		6A7E62CC291E459E00E0A698 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E62CA291E459E00E0A698 /* ProfileCollectionViewCell.swift */; };
+		6A7E62CD291E459E00E0A698 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7E62CB291E459E00E0A698 /* ProfileCollectionViewCell.xib */; };
 		6ABDAF982914EA040034CB05 /* CatstagramTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABDAF972914EA040034CB05 /* CatstagramTabBar.storyboard */; };
 		6AD3D2202916543100FF9A51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D21F2916543100FF9A51 /* HomeViewController.swift */; };
 		6AD3D22929169B4100FF9A51 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D22729169B4100FF9A51 /* FeedTableViewCell.swift */; };
@@ -42,6 +45,9 @@
 		6A19E294291005CB00E155B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6A19E29629100B8800E155B7 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		6A779DC72913F72C00028D35 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		6A7E62C7291E2B2900E0A698 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6A7E62CA291E459E00E0A698 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A7E62CB291E459E00E0A698 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		6ABDAF972914EA040034CB05 /* CatstagramTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatstagramTabBar.storyboard; sourceTree = "<group>"; };
 		6AD3D21F2916543100FF9A51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6AD3D22729169B4100FF9A51 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			children = (
 				6AD3D22B29169B5400FF9A51 /* Login */,
 				6AD3D2212916977D00FF9A51 /* Home */,
+				6A7E62C6291E2AF300E0A698 /* Profile */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -120,6 +127,24 @@
 				6A779DC72913F72C00028D35 /* UserInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6A7E62C6291E2AF300E0A698 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6A7E62C7291E2B2900E0A698 /* ProfileViewController.swift */,
+				6A7E62C9291E44CF00E0A698 /* ProfileCollectionViewCell */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6A7E62C9291E44CF00E0A698 /* ProfileCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A7E62CA291E459E00E0A698 /* ProfileCollectionViewCell.swift */,
+				6A7E62CB291E459E00E0A698 /* ProfileCollectionViewCell.xib */,
+			);
+			path = ProfileCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		6ABDAF962914E9DD0034CB05 /* Scene */ = {
@@ -242,6 +267,7 @@
 				6ABDAF982914EA040034CB05 /* CatstagramTabBar.storyboard in Resources */,
 				6AD3D2372917B53900FF9A51 /* StoryCollectionViewCell.xib in Resources */,
 				6A19E264290902F700E155B7 /* Assets.xcassets in Resources */,
+				6A7E62CD291E459E00E0A698 /* ProfileCollectionViewCell.xib in Resources */,
 				6A19E262290902F700E155B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +289,8 @@
 				6AD3D2202916543100FF9A51 /* HomeViewController.swift in Sources */,
 				6A19E29729100B8800E155B7 /* UIViewController+Extension.swift in Sources */,
 				6A19E293290F817600E155B7 /* String+Extension.swift in Sources */,
+				6A7E62CC291E459E00E0A698 /* ProfileCollectionViewCell.swift in Sources */,
+				6A7E62C8291E2B2900E0A698 /* ProfileViewController.swift in Sources */,
 				6A19E25D290902F600E155B7 /* SceneDelegate.swift in Sources */,
 				6AD3D22929169B4100FF9A51 /* FeedTableViewCell.swift in Sources */,
 			);
