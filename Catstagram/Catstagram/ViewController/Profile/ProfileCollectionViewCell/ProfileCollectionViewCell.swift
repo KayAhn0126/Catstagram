@@ -28,6 +28,10 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         profileImageView.layer.cornerRadius = 44
         addProfileImageView.layer.cornerRadius = 12
         
+        profileImageView.layer.borderColor = UIColor.lightGray.cgColor
+        profileImageView.layer.borderWidth = 2
+        
+        
         profileEditButton.layer.cornerRadius = 5
         profileEditButton.layer.borderColor = UIColor.lightGray.cgColor
         profileEditButton.layer.borderWidth = 1

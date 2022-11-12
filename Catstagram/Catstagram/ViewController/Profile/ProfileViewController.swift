@@ -23,29 +23,74 @@ class ProfileViewController: UIViewController {
         collectionView.register(UINib(nibName: "ProfileCollectionViewCell",
                                       bundle: nil),
                                 forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier)
+        collectionView.register(UINib(nibName: "PostCollectionViewCell",
+                                      bundle: nil),
+                                forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1 )
     }
 }
 
 extension ProfileViewController: UICollectionViewDataSource {
+    // 섹션의 갯수
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    
+    // Cell의 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        switch section {
+        case 0:
+            return 1
+        default:
+            return 24
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as? ProfileCollectionViewCell else {
-            return UICollectionViewCell()
+        let section = indexPath.section
+        switch section {
+        case 0:
+            guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as? ProfileCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        default:
+            guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as? PostCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            return cell
         }
-        return cell
     }
-}
-
-
-extension ProfileViewController: UICollectionViewDelegate {
-    
 }
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 159)
+        let section = indexPath.section
+        switch section {
+        case 0:
+            return CGSize(width: collectionView.frame.width, height: 159)
+        default:
+            let side = (collectionView.frame.width - 4) / 3
+            return CGSize(width: side, height: side)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        switch section {
+        case 0 :
+            return CGFloat(0)
+        default :
+            return CGFloat(1)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        switch section {
+        case 0 :
+            return CGFloat(0)
+        default :
+            return CGFloat(1)
+        }
     }
 }
