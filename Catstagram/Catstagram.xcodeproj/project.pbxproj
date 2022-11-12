@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B10A9DC622493F7DAE26F1 /* Pods_Catstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501FC3C7CC0228E1C918524B /* Pods_Catstagram.framework */; };
 		6A19E25B290902F600E155B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19E25A290902F600E155B7 /* AppDelegate.swift */; };
 		6A19E25D290902F600E155B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19E25C290902F600E155B7 /* SceneDelegate.swift */; };
 		6A19E262290902F700E155B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A19E260290902F700E155B7 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		501FC3C7CC0228E1C918524B /* Pods_Catstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A19E257290902F600E155B7 /* Catstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A19E25A290902F600E155B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A19E25C290902F600E155B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,8 @@
 		6AD3D22E2917A2D800FF9A51 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		6AD3D2342917B53900FF9A51 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AD3D2352917B53900FF9A51 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		88471758F4A91497397770B4 /* Pods-Catstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catstagram.release.xcconfig"; path = "Target Support Files/Pods-Catstagram/Pods-Catstagram.release.xcconfig"; sourceTree = "<group>"; };
+		ADFE41F705E7A9EFF626D291 /* Pods-Catstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catstagram.debug.xcconfig"; path = "Target Support Files/Pods-Catstagram/Pods-Catstagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +71,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B10A9DC622493F7DAE26F1 /* Pods_Catstagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14194DA67B8E7DFEBB988CB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADFE41F705E7A9EFF626D291 /* Pods-Catstagram.debug.xcconfig */,
+				88471758F4A91497397770B4 /* Pods-Catstagram.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6A19E24E290902F600E155B7 = {
 			isa = PBXGroup;
 			children = (
 				6A19E259290902F600E155B7 /* Catstagram */,
 				6A19E258290902F600E155B7 /* Products */,
+				14194DA67B8E7DFEBB988CB9 /* Pods */,
+				93CE37E0167A22F153AE2852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +234,14 @@
 			path = StoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		93CE37E0167A22F153AE2852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				501FC3C7CC0228E1C918524B /* Pods_Catstagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A19E26B290902F700E155B7 /* Build configuration list for PBXNativeTarget "Catstagram" */;
 			buildPhases = (
+				FE6847A4FDA18F870993D8CC /* [CP] Check Pods Manifest.lock */,
 				6A19E253290902F600E155B7 /* Sources */,
 				6A19E254290902F600E155B7 /* Frameworks */,
 				6A19E255290902F600E155B7 /* Resources */,
+				124DFEC6A4FE122F89FD7225 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +315,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		124DFEC6A4FE122F89FD7225 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catstagram/Pods-Catstagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catstagram/Pods-Catstagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catstagram/Pods-Catstagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE6847A4FDA18F870993D8CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Catstagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A19E253290902F600E155B7 /* Sources */ = {
@@ -450,6 +519,7 @@
 		};
 		6A19E26C290902F700E155B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADFE41F705E7A9EFF626D291 /* Pods-Catstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,6 +547,7 @@
 		};
 		6A19E26D290902F700E155B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88471758F4A91497397770B4 /* Pods-Catstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
