@@ -7,9 +7,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, DataTransferDelegate {
     @IBOutlet weak var tableView: UITableView!
+    var receivedData: [FeedModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,12 @@ class HomeViewController: UIViewController {
         
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
+        
+        let input = FeedAPIInput(limit: 10, page: 0)
+        let dataManager = FeedDataManager(self)
+        dataManager.feedDataManager(input)
+        
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -38,7 +42,7 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return receivedData.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,5 +59,12 @@ extension HomeViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+    }
+}
+
+extension HomeViewController {
+    func sendData(_ dataFromServer: [FeedModel]) {
+        self.receivedData = dataFromServer
+        tableView.reloadData()
     }
 }
