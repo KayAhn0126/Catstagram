@@ -13,6 +13,9 @@ class FeedDataManager {
     init(_ dataDelegate: DataTransferDelegate? = nil) {
         self.dataDelegate = dataDelegate
     }
+    deinit {
+        print("deinit")
+    }
     
     func feedDataManager(_ parameters: FeedAPIInput) {
         AF.request("https://api.thecatapi.com/v1/images/search", method: .get, parameters: parameters).validate().responseDecodable(of: [FeedModel].self) { response in

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController, DataTransferDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -23,10 +24,9 @@ class HomeViewController: UIViewController, DataTransferDelegate {
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
         
-        let input = FeedAPIInput(limit: 10, page: 0)
+        let input = FeedAPIInput(limit: 100, page: 10)
         let dataManager = FeedDataManager(self)
         dataManager.feedDataManager(input)
-        
     }
 }
 
@@ -57,6 +57,10 @@ extension HomeViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            if let urlString = receivedData[indexPath.row - 1].url {
+                let url = URL(string: urlString)
+                cell.contentImageView.kf.setImage(with: url)
+            }
             return cell
         }
     }

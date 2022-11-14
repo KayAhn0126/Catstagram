@@ -7,6 +7,6 @@
 
 // MARK: - 서버로 부터 response를 어떤 형태로 받을것인지.
 struct FeedModel: Decodable {
-    var id: String
-    var url: String
+    var id: String?
+    var url: String?
 }
