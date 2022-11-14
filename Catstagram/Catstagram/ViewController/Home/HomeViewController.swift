@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, DataTransferDelegate {
     @IBOutlet weak var tableView: UITableView!
+    var receivedData: [FeedModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,11 @@ class HomeViewController: UIViewController {
         
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
+        
+        let input = FeedAPIInput(limit: 100, page: 10)
+        let dataManager = FeedDataManager(self)
+        dataManager.feedDataManager(input)
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -38,7 +42,7 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return receivedData.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +57,18 @@ extension HomeViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            if let urlString = receivedData[indexPath.row - 1].url {
+                let url = URL(string: urlString)
+                cell.contentImageView.kf.setImage(with: url)
+            }
             return cell
         }
+    }
+}
+
+extension HomeViewController {
+    func sendData(_ dataFromServer: [FeedModel]) {
+        self.receivedData = dataFromServer
+        tableView.reloadData()
     }
 }
