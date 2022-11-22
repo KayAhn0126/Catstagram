@@ -1,7 +1,7 @@
 # Catstagram
 
 ## 🍎 UIView를 이용한 얇은선 그리기
-- [얇은선 그리기](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/DrawingAThinLineUsingUIView)
+- [얇은선 그리기](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/UIView/DrawingAThinLineUsingUIView)
 
 ## 🍎 여러 프로퍼티를 동일한 액션으로 연결할 때, for each와 연산프로퍼티 사용
 ```swift
@@ -33,13 +33,13 @@ private func setUpTextField() {
 ![](https://i.imgur.com/d58boIU.png)
 
 ## 🍎 버튼 내 특정 구간 속성 변경
-- [Applying a new attribute to the UIButton](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/ApplyingAttributeToButton)
+- [Applying a new attribute to the UIButton](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/UIButton/ApplyingAttributeToButton)
 
 ## 🍎 Label내 특정 구간 속성 변경
-- [Applying a new attribute to the UILabel](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/ApplyingAttributeToLabel)
+- [Applying a new attribute to the UILabel](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/UILabel/ApplyingAttributeToLabel)
 
 ## 🍎 버튼이 클릭이 되었을때 다른 이미지로 바꿔주기 (Default <-> Selected)
-[버튼 클릭시 변환 정리](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/WhenButtonIsSelected)
+[버튼 클릭시 변환 정리](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/UIButton/WhenButtonIsSelected)
 
 ## 🍎 xib파일 등록하기
 ```swift
@@ -57,16 +57,16 @@ tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
     - 즉 테이블 뷰는 자동으로 UIView를 제공해주지만, 콜렉션뷰는 직접 UIView를 추가해줘야 한다.
 
 ## 🍎 버튼의 터치 영역은 그대로 이미지만 줄이기
-- [버튼의 image inset 적용 정리](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/ApplyingImageInset)
+- [버튼의 image inset 적용 정리](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/UIButton/ApplyingImageInset)
 
 ## 🍎 AlamoFire를 통한 네트워킹
 - [Alamofire를 통한 네트워킹 및 메모리 누수 점검](https://github.com/KayAhn0126/Network/tree/main/Catstagram_Alamofire)
 
 ## 🍎 프로토콜을 이용해 VC간 결합도 줄이기
-- [Reduction of coupling between two VCs by using protocol](https://github.com/KayAhn0126/iOS-Study/tree/main/DesignPattern/DelegateWithProtocolExample)
+- [Reduction of coupling between two VCs by using protocol](https://github.com/KayAhn0126/iOS-Study/tree/main/DesignPattern/DelegateProtocolwithLowCoupling)
 - [참고자료 - 여러가지 VC간 데이터 전달](https://github.com/KayAhn0126/iOS-Study/tree/main/UI/DataTransferBetweenScreens)
 
-## 🍎 해결하지 못한 부분(해결완료)
+## 🍎 해결하지 못한 부분 (해결완료)
 ![](https://i.imgur.com/zBLkjnm.png)
 - 프로필 UI를 구성하기 전이다. UIBarButtonItem를 커스텀한 부분이 문제인것 같은데, 정확히 무엇이 문제인지 파악하지는 못했다.
     - **찾아보니 iOS 16에서만 발생하는 문제라고 한다.**
