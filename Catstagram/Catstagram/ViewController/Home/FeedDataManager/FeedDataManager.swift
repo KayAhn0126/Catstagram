@@ -8,7 +8,7 @@
 import Alamofire
 
 class FeedDataManager {
-    var dataDelegate: DataTransferDelegate?
+    weak var dataDelegate: DataTransferDelegate?
     
     init(_ dataDelegate: DataTransferDelegate? = nil) {
         self.dataDelegate = dataDelegate

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol DataTransferDelegate {
+protocol DataTransferDelegate: AnyObject {
     func sendData(_ dataFromServer: [FeedModel])
 }
